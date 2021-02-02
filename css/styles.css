@@ -673,20 +673,21 @@ body {
   position: absolute;
   padding: 63px 24px;
   bottom: 0;
+
   width: 100%;
   height: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+
   background: rgba(33, 150, 243, 0.9);
   color: var(--light-icon-color);
   transform: translateY(100%);
   transition: transform var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.thumb:hover .thumb-text,
-.thumb:focus .thumb-text {
+.thumb:hover .thumb-text {
   transform: translateY(0);
 }
 
