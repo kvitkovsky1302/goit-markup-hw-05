@@ -8,6 +8,7 @@
   --background-hero-color: #c4c4c4;
   --social-icon-light-color: #afb1b8;
   --light-icon-color: #ffffff;
+  --time-hover: 2500ms;
 }
 
 h1,
@@ -118,6 +119,7 @@ body {
 }
 
 .navigation-list-item:not(:last-child) {
+  display: flex;
   margin-right: 50px;
 }
 .contacts-list-item:not(:last-child) {
@@ -132,6 +134,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .head-contacts {
@@ -144,20 +148,39 @@ body {
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
   fill: currentColor;
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-mail {
   display: flex;
   margin-right: 10px;
+
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-smartphone {
   display: flex;
   margin-right: 10px;
+
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
+  position: relative;
   color: var(--secondary-color);
+}
+
+.current::after {
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  content: '';
+  width: 100%;
+  height: 4px;
+
+  background: #2196f3;
+  border-radius: 2px;
 }
 /* ============= end header =============*/
 
@@ -211,6 +234,8 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
+
+  transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -394,11 +419,15 @@ body {
 
   border: 1px solid var(--social-icon-light-color);
   border-radius: 4px;
+
+  transition: border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link-pic {
   display: block;
   fill: var(--social-icon-light-color);
+
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:not(:last-child) {
@@ -461,6 +490,8 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--light-icon-color);
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-map:hover,
@@ -474,6 +505,8 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts:hover,
@@ -513,6 +546,8 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
+
+  transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -523,6 +558,8 @@ body {
 .social-list-icon {
   width: 20px;
   height: 20px;
+
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-dark-theme {
@@ -564,6 +601,9 @@ body {
   color: var(--title-color);
   border: none;
   padding: 6px 20px;
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
+    background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-item:not(:last-child) {
@@ -592,6 +632,10 @@ body {
   outline: 1px solid #eeeeee;
 }
 
+.portfolio-list-link {
+  transition: box-shadow var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-list-link:hover,
 .portfolio-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -617,18 +661,6 @@ body {
 
 .cards-title {
   padding: 20px 24px;
-
-  /* border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: #eeeeee;
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #eeeeee;
-
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #eeeeee; */
 }
 /* ============= end portfolio list =============*/
 
