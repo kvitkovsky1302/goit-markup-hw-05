@@ -101,7 +101,7 @@ body {
   height: 30px;
   top: 8px;
   right: 8px;
-  background: var(--background-card-color);
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
